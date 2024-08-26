@@ -1,0 +1,187 @@
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* vars */
+:root {
+  --bg-color: #181818;
+  --primary-color: #1e90ff; /* Modern blue */
+  --secondary-color: #242424;
+  --text-color: #f5f5f5;
+  --text-muted: #999999;
+  --border-color: #333333;
+}
+
+/* styles */
+body,
+html {
+  font-family: 'Inter', Arial, sans-serif;
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+}
+
+#sidebar {
+  width: 25%;
+  background-color: var(--secondary-color);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+#header h1 {
+  font-size: 1.2em;
+}
+
+#add-room-btn {
+  background-color: #fff;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+#room-list {
+  padding: 10px;
+}
+
+.room {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: var(--bg-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.room.active,
+.room:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+#chat-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#chat-header {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+}
+
+#room-title {
+  font-size: 1.5em;
+  color: var(--text-color);
+}
+
+/* #status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: yellow;
+}
+
+.status-connected {
+  background-color: green;
+}
+
+.status-reconnecting {
+  background-color: red;
+} */
+
+#messages {
+  padding: 15px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 15px;
+}
+
+.message .username {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+
+.message .text {
+  margin-left: 10px;
+  color: var(--text-color);
+}
+
+#message-form-container {
+  border-top: 1px solid var(--border-color);
+  padding: 10px;
+  background-color: var(--secondary-color);
+}
+
+#new-message {
+  display: flex;
+}
+
+#new-message input[type='text'] {
+  flex: 4;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#new-message input#username {
+  flex: 1;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-align: left;
+}
+
+#send-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#send-btn:hover {
+  background-color: #1c86ee;
+}
+
+#app-logo {
+  width: 40px; /* Adjust this value to change the logo size */
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle; /* Aligns the logo with the text */
+}

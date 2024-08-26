@@ -1,0 +1,7 @@
+# Rust-specific files
+target/
+target/debug/
+target/release/
+Cargo.lock
+**/*.rs.bk
+*.pdb

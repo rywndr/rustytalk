@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>RustyTalk</title>
+
+    <link
+      rel="icon"
+      href="/logo.png"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="/style.css"
+    />
+    <script
+      src="/script.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div id="app">
+      <aside id="sidebar">
+        <div id="header">
+          <img
+            src="/logo.png"
+            alt="RustyTalk Logo"
+            id="app-logo"
+          />
+          <h1>StackUp Learn & Earn</h1>
+          <button id="add-room-btn">+</button>
+        </div>
+        <div id="room-list"></div>
+      </aside>
+
+      <section id="chat-section">
+        <header id="chat-header">
+          <h2 id="room-title">Lobby</h2>
+          <!-- <div
+            id="status-indicator"
+            class="status-pending"
+          ></div> -->
+        </header>
+
+        <div id="messages"></div>
+
+        <footer id="message-form-container">
+          <form
+            id="new-message"
+            autocomplete="off"
+          >
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter username (default guest)"
+              maxlength="19"
+            />
+            <input
+              type="text"
+              id="message"
+              placeholder="Type a message"
+            />
+            <button
+              type="submit"
+              id="send-btn"
+            >
+              Send
+            </button>
+          </form>
+        </footer>
+      </section>
+    </div>
+
+    <template id="room-template">
+      <div class="room"></div>
+    </template>
+
+    <template id="message-template">
+      <div class="message">
+        <span class="username"></span>
+        <p class="text"></p>
+      </div>
+    </template>
+  </body>
+</html>
