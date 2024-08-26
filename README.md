@@ -47,6 +47,10 @@ RustyTalk uses Server-Sent Events (SSE) to push messages to clients in real-time
      ```bash
      cargo run --release
      ```
-   - Open your browser and navigate to `http://localhost:8000` to start using RustyTalk.
+   - Open your browser and navigate to `http://localhost:8000`on your preferred browser.
+  4. **Using the Application**
+     - Each browser instance will act as a user/client, then open another browser and also navigate to `http://localhost:8000`. enter your preferred username for each client, and then message away! You can test it with as many users/clients as you wish :D
+
+**Video Demo** [here](https://www.youtube.com/watch?v=jWkgyMNyReo)
 
 RustyTalk is not just a chat application; it’s a showcase of Rust’s potential in building fast, reliable, and user-friendly tools. Its simplicity, coupled with powerful real-time capabilities, makes it a must-have for any group looking for an efficient communication solution.
